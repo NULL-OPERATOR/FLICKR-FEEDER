@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/NULL-OPERATOR/infinite_photo_scroller.svg?branch=master)](https://travis-ci.org/NULL-OPERATOR/infinite_photo_scroller) [![Code Climate](https://codeclimate.com/github/NULL-OPERATOR/infinite_photo_scroller/badges/gpa.svg)](https://codeclimate.com/github/NULL-OPERATOR/infinite_photo_scroller) [![Coverage Status](https://coveralls.io/repos/github/NULL-OPERATOR/infinite_photo_scroller/badge.svg?branch=master)](https://coveralls.io/github/NULL-OPERATOR/infinite_photo_scroller?branch=master)
 
-# Photo scrolling.. infinitely.....
+# Flickr Viewer.. infinitely.....
 
-ANGELA Seeded, for optimum photo viewz
+Angular Seeded, for optimum photo viewz
 
 
 

@@ -1,16 +1,15 @@
 'use strict';
 
 /* jasmine specs for controllers go here */
-describe('PhoneCat controllers', function() {
+describe('Img controllers', function() {
 
-  describe('PhoneListCtrl', function(){
+  describe('ImgViewerCtrl', function(){
 
-    beforeEach(module('phonecatApp'));
+    beforeEach(module('imgApp'));
 
-    it('should create "phones" model with 3 phones', inject(function($controller) {
+    it('should create $scope.images from json', inject(function($controller) {
       var scope = {},
-          ctrl = $controller('PhoneListCtrl', {$scope:scope});
-
+          ctrl = $controller('ImgViewerCtrl', {$scope:scope});
       expect(scope.phones.length).toBe(3);
     }));
 
