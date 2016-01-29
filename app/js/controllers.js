@@ -20,7 +20,7 @@ imgApp.controller('ImgViewerCtrl',  function($scope) {
     "generator": "https://www.flickr.com/",
     "items": [
       {
-      "title": "_IGP8698.jpg",
+      "title": "title1",
       "link": "https://www.flickr.com/photos/andreakirkby/24060963634/",
       "media": {"m":"https://farm2.staticflickr.com/1684/24060963634_9d7483301b_m.jpg"},
       "date_taken": "2016-01-29T15:47:43-08:00",
@@ -30,7 +30,7 @@ imgApp.controller('ImgViewerCtrl',  function($scope) {
       "author_id": "12071889@N00",
       "tags": "portugal architecture gothic monastery batalha manueline"
       }, {
-      "title": "100 pour un Hyakunin Manigod - 18",
+      "title": "title2",
       "link": "https://www.flickr.com/photos/barbery/24060963834/",
       "media": {"m":"https://farm2.staticflickr.com/1671/24060963834_8f4e13b2c2_m.jpg"},
       "date_taken": "2015-12-18T04:47:14-08:00",
@@ -40,7 +40,7 @@ imgApp.controller('ImgViewerCtrl',  function($scope) {
       "author_id": "77673826@N00",
       "tags": "portugal architecture gothic monastery batalha manueline"
       }, {
-      "title": "#METZ 激ヤバ過ぎたしもう狂気の沙汰。初っぱなから“Headache”→“Get Off”という1st再現状態で頭のネジがどっか飛んでったよね😇",
+      "title": "#METZ😇",
       "link": "https://www.flickr.com/photos/ekatokyo/24062296003/",
       "media": {"m":"https://farm2.staticflickr.com/1524/24062296003_a0baa01c4e_m.jpg"},
       "date_taken": "2016-01-29T23:47:45-08:00",

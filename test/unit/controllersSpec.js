@@ -20,5 +20,21 @@ describe('Img controllers', function() {
       expect(scope.imgOrder).toBe("");
     });
 
+    it('should filter the images by search tags', function() {
+
+      var images = element.all(by.repeater('image in images'));
+      var search = element(by.model('search'));
+
+      expect(images.count()).toBe(3);
+
+      search.sendKeys('gothic');
+      expect(images.count()).toBe(2);
+      search.clear();
+
+      search.sendKeys('squareformat');
+      expect(images.count()).toBe(1);
+    });
+
+
   });
 });
