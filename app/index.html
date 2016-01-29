@@ -1,21 +1,48 @@
 <!doctype html>
-<html lang="en" ng-app="imgApp">
+<html lang="en" ng-app="imgApp" ng-controller="ImgViewerCtrl">
 <head>
   <meta charset="utf-8">
-  <title>Flickr Viewer</title>
+  <title ng-bind-template="Flickr Viewer {{search}}"></title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+
   <script src="js/controllers.js"></script>
 </head>
-<body ng-controller="ImgViewerCtrl">
+<body>
 
-  <ul>
-    <li ng-repeat="image in images">
-      <span>{{image.name}}</span>
-      <p>{{image.snippet}}</p>
-    </li>
-  </ul>
+  <div class="container-fluid">
+    <!-- <div class="row"> -->
+      <nav class="row">
+        Search: <input ng-model="search">
+        Sort by:
+        <select ng-model="imgOrder">
+          <option value="">None</option>
+          <option value="date_taken">Date taken</option>
+          <option value="date_published">Date published</option>
+        </select>
+
+      </nav>
+      <div class="row">
+        <!-- {{items}} -->
+        <!-- {{images}} -->
+        <ul class="images">
+          <li ng-repeat="image in images | filter:search | orderBy:imgOrder">
+            <div>
+              <a href={{image.link}}>{{image.title}}</a>
+              <p>{{image.tags}}</p>
+              <img src={{image.media["m"]}}>
+              <p>{{image.author}}</p>
+
+              <p>{{image.tags}}</p>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    <!-- </div> -->
+  </div>
 
 </body>
 </html>
