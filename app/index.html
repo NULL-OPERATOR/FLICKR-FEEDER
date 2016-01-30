@@ -18,8 +18,9 @@
         Search: <input ng-model="search">
         Sort by:
         <select ng-model="imgOrder">
-          <option value="">None</option>
-          <option value="date_taken">Date taken</option>
+          <option value=""> - </option>
+          <option value="date_taken">Date taken: Newest</option>
+          <option value="-date_taken">Date taken: Oldest</option>
           <option value="date_published">Date published</option>
         </select>
 
@@ -30,10 +31,10 @@
         <ul class="images">
           <li ng-repeat="image in images | filter:search | orderBy:imgOrder">
             <div>
-              <a href={{image.link}}>{{image.title}}</a>
+              <a ng-href={{image.link}}>{{image.title}}</a>
               <p>{{image.tags}}</p>
-              <img src={{image.media["m"]}}>
-              <p>{{image.author}}</p>
+              <img ng-src={{image.media["m"]}}>
+              <p> {{nameFilter(image.author)}}</p>
 
               <p>{{image.tags}}</p>
             </div>

@@ -1,40 +1,31 @@
 'use strict';
 
-/* jasmine specs for controllers go here */
-describe('Img controllers', function() {
+describe('imgApp controller', function() {
 
   describe('ImgViewerCtrl', function(){
-    var scope, ctrl;
+    var scope, ctrl, $httpBackend;
 
     beforeEach(module('imgApp'));
-    beforeEach(inject(function($controller) {
-      scope = {};
-      ctrl = $controller('ImgViewerCtrl', {$scope:scope});
+    beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
+      $httpBackend = _$httpBackend_;
+      var url = "http://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=JSON_CALLBACK"
+
+      $httpBackend.expectJSONP(url)
+        .respond( {"items": [{"title": "upload"}]} )
+
+      scope = $rootScope.$new();
+      ctrl = $controller('ImgViewerCtrl', {$scope: scope});
     }));
 
-    it('should create scope.images from json', inject(function($controller) {
-      expect(scope.images.length).toBe(3);
-    }));
+    it('should get json and pull the image array out', function() {
+      expect(scope.images).toBeUndefined();
+      $httpBackend.flush();
 
-    it('has an empty default search order', function() {
-      expect(scope.imgOrder).toBe("");
+      expect(scope.images).toEqual([{"title": "upload"}]);
     });
 
-    it('should filter the images by search tags', function() {
-
-      var images = element.all(by.repeater('image in images'));
-      var search = element(by.model('search'));
-
-      expect(images.count()).toBe(3);
-
-      search.sendKeys('gothic');
-      expect(images.count()).toBe(2);
-      search.clear();
-
-      search.sendKeys('squareformat');
-      expect(images.count()).toBe(1);
+    it('should set the default value of orderProp model', function() {
+      expect(scope.imgOrder).toBe('');
     });
-
-
   });
 });

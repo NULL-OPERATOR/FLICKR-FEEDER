@@ -15,7 +15,6 @@ To get you started you can simply clone the angular-seed repository and install 
  You must have node.js and npm installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
 
 
-
 ### Install Dependencies
 
 ```
