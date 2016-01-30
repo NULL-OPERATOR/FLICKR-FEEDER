@@ -7,43 +7,15 @@
   <link rel="stylesheet" href="css/app.css">
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="js/app.js"></script>
 
-  <script src="js/controllers.js"></script>
+  <script src="js/controllers/controllers.js"></script>
+  <script src="js/controllers/imageViewController.js"></script>
 </head>
 <body>
 
-  <div class="container-fluid">
-    <!-- <div class="row"> -->
-      <nav class="row">
-        Search: <input ng-model="search">
-        Sort by:
-        <select ng-model="imgOrder">
-          <option value=""> - </option>
-          <option value="date_taken">Date taken: Newest</option>
-          <option value="-date_taken">Date taken: Oldest</option>
-          <option value="date_published">Date published</option>
-        </select>
-
-      </nav>
-      <div class="row">
-        <!-- {{items}} -->
-        <!-- {{images}} -->
-        <ul class="images">
-          <li ng-repeat="image in images | filter:search | orderBy:imgOrder">
-            <div>
-              <a ng-href={{image.link}}>{{image.title}}</a>
-              <p>{{image.tags}}</p>
-              <img ng-src={{image.media["m"]}}>
-              <p> {{nameFilter(image.author)}}</p>
-
-              <p>{{image.tags}}</p>
-            </div>
-          </li>
-        </ul>
-
-      </div>
-    <!-- </div> -->
-  </div>
+  <div ng-view></div>
 
 </body>
 </html>
