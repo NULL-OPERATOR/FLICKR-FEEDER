@@ -7,8 +7,12 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+*:focus {
+    outline: none;
+}
+
 body {
-  background-color: #212121;
+  background: #D80A6E;
 }
 
 figcaption {
@@ -16,40 +20,72 @@ figcaption {
   font-size: 11px;
   line-height: 1;
 }
-.nav-drag{
+
+/*.nav-drag{
   z-index: 2;
   position: relative;
   margin-left: 200px;
-  
-}
-.navbar {
+}*/
+
+.nav-container {
   z-index: 2;
   position: fixed;
+  top: 30px;
+  left: 50px;
 }
+
+.nav-options {
+  padding: 8px;
+  margin-left: 10px;
+  display: flex;
+  color: #C3C3C3;
+  font-weight: 100;
+  font-size: x-large;
+}
+
+#search-order {
+  margin-left: 10px;
+}
+
+#search-input {
+  background-color: rgba(191, 191, 191, 0.22);
+  border: 0px;
+  border-radius: 5px;
+  height: 1.2em;
+  font-size: 18px;
+  font-weight: bolder;
+  margin-top: 5px;
+  color: #FF00B8;
+  text-overflow: clip;
+  text-align: center;
+  font-weight: 100;
+  font-size: large;
+}
+
+#drag-icon {
+  margin-left: 30px;
+  margin-top: 4px;
+}
+
 .nav-bg {
   position: absolute;
   top: 0px;
-  width: 200%;
-  height: 70px;
-  opacity: 0.6;
-  background-color: white;
+  left: 0px;
+  width: 102%;
+  height: 50px;
+  opacity: 0.8;
+  background-color: #464646;
+  border-radius: 7px;
   z-index: -1;
   overflow: hidden;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -ms-filter: blur(5px);
-  -o-filter: blur(5px);
-  filter: blur(5px);
 }
 
 .image {
   width: 25%;
   height: 180px;
-position: relative;
-float: left;
-overflow: hidden;
-  /*width: 25%;
-  height: 180px;*/
+  position: relative;
+  float: left;
+  overflow: hidden;
 }
 
 .loading {
@@ -58,15 +94,23 @@ overflow: hidden;
 }
 
 .image figcaption {
+  color: #D80A6E;
+  font-size: larger;
   text-align: center;
-  top: 0px;
-  position: absolute;
+  top: 10px;
+  position: relative;;
   opacity: 0;
   z-index: 1;
 }
 
+.overlay-text-title {
+  display: flex;
+  color: #C3C3C3;
+  font-weight: 100;
+}
+
 .image:after {
-  background-color: #ffffff;
+  background-color: #464646;
   position: absolute;
   content: "";
   display: block;
@@ -77,15 +121,9 @@ overflow: hidden;
   opacity: 0;
 }
 
-.image:hover figcaption,
-.image.hover figcaption {
+.image:hover figcaption {
   opacity: 1;
-  /*-webkit-transition-delay: 0.2s;*/
-  transition-delay: 0.3s;
 }
-.image:hover:after,
-.image.hover:after {
-  /*-webkit-transform: rotateX(0);
-  transform: rotateX(0);*/
-  opacity: 0.7;
+.image:hover:after {
+  opacity: 0.8;
 }
