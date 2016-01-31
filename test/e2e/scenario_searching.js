@@ -8,10 +8,10 @@ describe('img app searching', function() {
 
   it('controlling search functions', function() {
 
-  var imageTitles = element.all(by.repeater('image in images').column('image.title'));
+  var imageTitles = element.all(by.repeater('image in flickr.images').column('image.title'));
   var search = element(by.model('search'));
 
-  expect(imageTitles.count()).toBe(20);
+  expect(imageTitles.count()).toBeGreaterThan(20);
 
   var first = imageTitles[0]
   var last = imageTitles[19]

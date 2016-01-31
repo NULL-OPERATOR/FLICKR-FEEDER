@@ -11,6 +11,10 @@
     outline: none;
 }
 
+p {
+  margin: 0px;
+}
+
 body {
   background: #D80A6E;
 }
@@ -20,12 +24,6 @@ figcaption {
   font-size: 11px;
   line-height: 1;
 }
-
-/*.nav-drag{
-  z-index: 2;
-  position: relative;
-  margin-left: 200px;
-}*/
 
 .nav-container {
   z-index: 2;
@@ -63,7 +61,7 @@ figcaption {
 }
 
 #drag-icon {
-  margin-left: 30px;
+  margin-left: 25px;
   margin-top: 4px;
 }
 
@@ -95,7 +93,7 @@ figcaption {
 
 .image figcaption {
   color: #D80A6E;
-  font-size: larger;
+  font-size: small;
   text-align: center;
   top: 10px;
   position: relative;;
@@ -104,10 +102,23 @@ figcaption {
 }
 
 .overlay-text-title {
-  display: flex;
+  display: inline-flex;
   color: #C3C3C3;
   font-weight: 100;
 }
+
+.nav-text-move {
+  font-size: 10px;
+  font-weight: 200;
+  margin-top: 10px;
+  position: fixed;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
 
 .image:after {
   background-color: #464646;
