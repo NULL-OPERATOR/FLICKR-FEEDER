@@ -1,5 +1,4 @@
-<div class="container-fluid">
-  <!-- <div class="row"> -->
+<div class="image-container">
     <nav class="row">
       Search: <input ng-model="search">
       Sort by:
@@ -11,22 +10,21 @@
       </select>
 
     </nav>
-    <div class="row">
-      <!-- {{items}} -->
-      <!-- {{images}} -->
-      <ul class="images">
-        <li ng-repeat="image in images | filter:search | orderBy:imgOrder">
-          <div>
-            <a ng-href={{image.link}}>{{image.title}}</a>
-            <p>{{image.tags}}</p>
-            <img ng-src={{image.media["m"]}}>
-            <p> {{nameFilter(image.author)}}</p>
+      <div class="" infinite-scroll='flickr.nextPage()' infinite-scroll-disabled='flickr.busy' infinite-scroll-distance='1'>
+        <div ng-repeat="image in flickr.images | filter:search | orderBy:imgOrder" ng-init="bg=image.media['m']">
+          <figure class="image">
+            <div class="image-wrap">
+              <img ng-src={{image.media['m']}} />
+            </div>
+            <figcaption class="text-overlay">
+              <a ng-href={{image.link}}>{{image.title}}</a>
+              <p>by {{nameFilter(image.author)}}</p>
+              <p>Tags: {{image.tags}}</p>
+            </figcaption>
+          </figure>
+        <div style='clear: both;'></div>
+        </div>
+        <div ng-show='flickr.busy'>Loading data...</div>
+      </div>
 
-            <p>{{image.tags}}</p>
-          </div>
-        </li>
-      </ul>
-
-    </div>
-  <!-- </div> -->
 </div>

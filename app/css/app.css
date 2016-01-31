@@ -1,6 +1,69 @@
-/* app css stylesheet */
-
+/*@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);*/
+* {
+   margin: 0;
+   padding: 0;
+   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
 body {
-  padding-top: 20px;
+  background-color: #212121;
 }
 
+figcaption {
+  text-align: center;
+  font-size: 11px;
+  line-height: 1;
+
+}
+
+.image {
+  width: 25%;
+position: relative;
+float: left;
+overflow: hidden;
+  /*width: 25%;
+  height: 200px;
+  background-size: auto;
+
+  position: relative;
+  float: left;
+  overflow: hidden;
+  color: #000000;*/
+
+
+}
+
+.image figcaption {
+  text-align: center;
+  top: 0px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+
+.image:after {
+  background-color: #ffffff;
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0;
+}
+
+.image:hover figcaption,
+.image.hover figcaption {
+  opacity: 1;
+  /*-webkit-transition-delay: 0.2s;*/
+  transition-delay: 0.3s;
+}
+.image:hover:after,
+.image.hover:after {
+  /*-webkit-transform: rotateX(0);
+  transform: rotateX(0);*/
+  opacity: 0.7;
+}

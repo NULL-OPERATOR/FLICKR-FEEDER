@@ -4,6 +4,18 @@
 
 Angular Seeded, for optimum photo viewz
 
+npm install (will run bower too)
+npm run update-webdriver
+
+to launch
+http-server -a localhost -p 8000
+or
+npm start
+
+to test
+npm test
+or
+npm run protractor
 
 
 ## Getting Started
