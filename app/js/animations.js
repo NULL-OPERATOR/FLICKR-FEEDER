@@ -1,1 +1,1 @@
-angular.module('imgApp.animations', ['ngAnimate'])
+// angular.module('imgApp.animations', ['ngAnimate'])

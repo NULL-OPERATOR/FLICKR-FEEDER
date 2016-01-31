@@ -3,8 +3,8 @@
 var imgApp = angular.module('imgApp', [
   'ngRoute',
   'imgApp.controllers',
-  'imgApp.animations',
   'imgApp.services',
+  'imgApp.directives',
   'infinite-scroll'
 ]);
 

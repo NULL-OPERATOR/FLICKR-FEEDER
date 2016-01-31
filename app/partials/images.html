@@ -1,30 +1,37 @@
+<div>
 <div class="image-container">
-    <nav class="row">
-      Search: <input ng-model="search">
-      Sort by:
-      <select ng-model="imgOrder">
-        <option value=""> - </option>
-        <option value="date_taken">Date taken: Newest</option>
-        <option value="-date_taken">Date taken: Oldest</option>
-        <option value="date_published">Date published</option>
-      </select>
+  <nav class="row navbar" id="draggable" >
+    <p id="search-input">Search:</p><input ng-model="search">
+    Sort by:
+    <select ng-model="imgOrder">
+      <option value=""> - </option>
+      <option value="date_taken">Date taken: Newest</option>
+      <option value="-date_taken">Date taken: Oldest</option>
+      <option value="date_published">Date published</option>
+    </select>
+    <div class="nav-bg" id="draggable">
+      <p>Drag me around</p>
 
-    </nav>
-      <div class="" infinite-scroll='flickr.nextPage()' infinite-scroll-disabled='flickr.busy' infinite-scroll-distance='1'>
-        <div class="imagebox" ng-repeat="image in flickr.images | filter:search | orderBy:imgOrder" ng-init="bg=image.media['m']">
-          <figure class="image" style="background:url(bg)">
-            <div class="image-wrap">
-              <img ng-src={{image.media['m']}} />
-            </div>
-            <figcaption class="text-overlay">
-              <a ng-href={{image.link}}>{{image.title}}</a>
-              <p>by {{nameFilter(image.author)}}</p>
-              <p>Tags: {{image.tags}}</p>
-            </figcaption>
-          </figure>
-        <!-- <div style='clear: both;'></div> -->
-        </div>
-        <div ng-show='flickr.busy'>Loading data...</div>
-      </div>
+    </div>
+  </nav>
+  <div class="nav-drag" id="draggable">
+    <p>Drag me around</p>
 
+  </div>
+  <div class="" infinite-scroll='flickr.nextLoad()' infinite-scroll-disabled='flickr.busy' infinite-scroll-distance='1'>
+    <figure class="image" ng-repeat="image in flickr.images | filter:search | orderBy:imgOrder" ng-init="bg=image.media['m']" style="background:url({{bg}});background-size:cover;">
+      <!-- <figure class="image"> -->
+        <!-- <div class="image-wrap"> -->
+          <!-- <img ng-src={{image.media['m']}} /> -->
+        <!-- </div> -->
+        <figcaption class="text-overlay">
+          <a ng-href={{image.link}}>{{image.title}}</a>
+          <p>by {{nameFilter(image.author)}}</p>
+          <p>Tags: {{image.tags}}</p>
+        </figcaption>
+      </figure>
+    <!-- <div style='clear: both;'></div> -->
+    <!-- </div> -->
+    <div class="loading" ng-show='flickr.busy'>Waiting...</div>
+  </div>
 </div>

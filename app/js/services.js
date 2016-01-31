@@ -33,8 +33,7 @@ Flickr.prototype.addNewImages = function(images) {
   }
 };
 
-
-Flickr.prototype.nextPage = function() {
+Flickr.prototype.nextLoad = function() {
   if (this.busy) return;
   this.busy = true;
   var url = "http://api.flickr.com/services/feeds/photos_public.gne?after=" + this.after + "&format=json&jsoncallback=JSON_CALLBACK";

@@ -15,24 +15,46 @@ figcaption {
   text-align: center;
   font-size: 11px;
   line-height: 1;
-
+}
+.nav-drag{
+  z-index: 2;
+  position: relative;
+  margin-left: 200px;
+  
+}
+.navbar {
+  z-index: 2;
+  position: fixed;
+}
+.nav-bg {
+  position: absolute;
+  top: 0px;
+  width: 200%;
+  height: 70px;
+  opacity: 0.6;
+  background-color: white;
+  z-index: -1;
+  overflow: hidden;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter: blur(5px);
 }
 
 .image {
   width: 25%;
+  height: 180px;
 position: relative;
 float: left;
 overflow: hidden;
   /*width: 25%;
-  height: 200px;
-  background-size: auto;
+  height: 180px;*/
+}
 
-  position: relative;
-  float: left;
-  overflow: hidden;
-  color: #000000;*/
-
-
+.loading {
+  font-size: larger;
+  color: white;
 }
 
 .image figcaption {
