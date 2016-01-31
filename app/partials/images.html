@@ -11,8 +11,8 @@
 
     </nav>
       <div class="" infinite-scroll='flickr.nextPage()' infinite-scroll-disabled='flickr.busy' infinite-scroll-distance='1'>
-        <div ng-repeat="image in flickr.images | filter:search | orderBy:imgOrder" ng-init="bg=image.media['m']">
-          <figure class="image">
+        <div class="imagebox" ng-repeat="image in flickr.images | filter:search | orderBy:imgOrder" ng-init="bg=image.media['m']">
+          <figure class="image" style="background:url(bg)">
             <div class="image-wrap">
               <img ng-src={{image.media['m']}} />
             </div>
@@ -22,7 +22,7 @@
               <p>Tags: {{image.tags}}</p>
             </figcaption>
           </figure>
-        <div style='clear: both;'></div>
+        <!-- <div style='clear: both;'></div> -->
         </div>
         <div ng-show='flickr.busy'>Loading data...</div>
       </div>
