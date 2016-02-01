@@ -23,7 +23,8 @@ Y88b   d88P   888   8888888    888 d888b 888 8888888    888   d88P
 ![Image Alt](app/img/screenshot.png)
 
 ## About
-Using AngularJs/Html/Css and the Flickr API to load the flickr public feed.
+##### Full page Flickr public-feed viewer.
+Using AngularJs/Html/Css and the Flickr API
 (Angular Seeded, for optimum photo viewz)
 
 node.js and npm required - get them from [http://nodejs.org/](http://nodejs.org/).
@@ -42,7 +43,7 @@ npm run update-webdriver
 ```
 now visit
 ```
-http://localhost:8000/app/index.html#/
+http://localhost:8000/app
 ```
 launch the server
 ```

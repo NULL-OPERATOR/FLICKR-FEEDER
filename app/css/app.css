@@ -95,7 +95,7 @@ figcaption {
   color: #D80A6E;
   font-size: small;
   text-align: center;
-  top: 10px;
+  margin-top: 20%;
   position: relative;;
   opacity: 0;
   z-index: 1;

@@ -1,6 +1,5 @@
 'use strict';
 angular.module('imgApp.services', [])
-
 .factory('Flickr', function($http) {
   var Flickr = function() {
     this.images = [];
