@@ -1,24 +1,9 @@
 [![Build Status](https://travis-ci.org/NULL-OPERATOR/infinite_photo_scroller.svg?branch=master)](https://travis-ci.org/NULL-OPERATOR/infinite_photo_scroller) [![Code Climate](https://codeclimate.com/github/NULL-OPERATOR/infinite_photo_scroller/badges/gpa.svg)](https://codeclimate.com/github/NULL-OPERATOR/infinite_photo_scroller) [![Coverage Status](https://coveralls.io/repos/github/NULL-OPERATOR/infinite_photo_scroller/badge.svg?branch=master)](https://coveralls.io/github/NULL-OPERATOR/infinite_photo_scroller?branch=master)
 ```
-8888888888 888      8888888  .d8888b.  888    d8P  8888888b.       
-888        888        888   d88P  Y88b 888   d8P   888   Y88b      
-888        888        888   888    888 888  d8P    888    888      
-8888888    888        888   888        888d88K     888   d88P      
-888        888        888   888        8888888b    8888888P"       
-888        888        888   888    888 888  Y88b   888 T88b        
-888        888        888   Y88b  d88P 888   Y88b  888  T88b       
-888        88888888 8888888  "Y8888P"  888    Y88b 888   T88b      
-
-
-
-888     888 8888888 8888888888 888       888 8888888888 8888888b.  
-888     888   888   888        888   o   888 888        888   Y88b
-888     888   888   888        888  d8b  888 888        888    888
-Y88b   d88P   888   8888888    888 d888b 888 8888888    888   d88P
- Y88b d88P    888   888        888d88888b888 888        8888888P"  
-  Y88o88P     888   888        88888P Y88888 888        888 T88b   
-   Y888P      888   888        8888P   Y8888 888        888  T88b  
-    Y8P     8888888 8888888888 888P     Y888 8888888888 888   T88b
+'  .___.   ._. __ .  ..__       .___.___.___.__ .___.__
+'  [__ |    | /  `|_/ [__)      [__ [__ [__ |  \[__ [__)
+'  |   |____|_\__.|  \|  \      |   [___[___|__/[___|  \
+' (╯◕_◕)╯SCROLL (╯◕_◕)╯SCROLL (╯◕_◕)╯SCROLL (╯◕_◕)╯SCROLL
 ```
 ![Image Alt](app/img/screenshot.png)
 
