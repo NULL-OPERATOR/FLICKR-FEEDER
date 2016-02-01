@@ -12,13 +12,20 @@
 Using AngularJs/Html/Css and the Flickr API
 (Angular Seeded, for optimum photo viewz)
 
+## Current Features
+
+- Infinite (╯◕_◕)╯SCROLLing_
+- Search filters by: Title/Tags/Author
+- Images arranged by: Date taken/Date published
+
+
 node.js and npm required - get them from [http://nodejs.org/](http://nodejs.org/).
 
 ## To run
 clone & cd into the repo
 ```
-git clone :
-cd infinite_photo_scroller
+git clone https://github.com/NULL-OPERATOR/FLICKR-FEEDER.git
+cd FLICKR-FEEDER
 ```
 install dependencies
 (npm install will run bower)
