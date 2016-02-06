@@ -20,8 +20,8 @@
     <div class="nav-bg"></div>
   </nav>
 
-  <div class="" infinite-scroll='flickr.nextLoad()' infinite-scroll-disabled='flickr.busy' infinite-scroll-distance='1'>
-    <figure class="image" ng-repeat="image in flickr.images | filter:search | orderBy:imgOrder" ng-init="bg=image.media['m']" style="background:url({{bg}});background-size:cover;">
+  <div class="" infinite-scroll='main.nextLoad()' infinite-scroll-disabled='main.busy' infinite-scroll-distance='1'>
+    <figure class="image" ng-repeat="image in main.images | filter:search | orderBy:imgOrder" ng-init="bg=image.media['m']" style="background:url({{bg}});background-size:cover;">
       <figcaption class="text-overlay">
         <p class="overlay-text-title"> Title </p><p>{{ image.title | limitTo : 20}}</p>
         <p class="overlay-text-title"> Author</p><p>{{ nameFilter(image.author)}}</p>
@@ -30,6 +30,6 @@
         <span class="glyphicon glyphicon-heart"></span>
       </figcaption>
     </figure>
-    <div class="loading" ng-show='flickr.busy'>Loading...</div>
+    <div class="loading" ng-show='main.busy'>Loading...</div>
   </div>
 </div>

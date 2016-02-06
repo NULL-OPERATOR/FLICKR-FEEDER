@@ -1,12 +1,13 @@
 'use strict';
 (function () {
-  function MainCtrl (Flickr) {
+  function MainCtrl (FlickrService) {
     var self = this;
-
-    self.flickr = new Flickr();
+    self.nextLoad = FlickrService.nextLoad;
+    self.busy = FlickrService.busy;
+    self.images = FlickrService.images;
     self.imgOrder = '';
 
-    self..nameFilter = function(user) {
+    self.nameFilter = function(user) {
       var to_del = user.replace(/ *\([^)]*\) */g, "");
       return user.replace(to_del, "");
     };
@@ -14,5 +15,5 @@
   }
   angular
     .module('imgApp')
-    .controller('MainCtrl',['Flickr', MainCtrl]);
+    .controller('MainCtrl',['FlickrService', MainCtrl]);
 })();

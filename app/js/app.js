@@ -3,7 +3,7 @@
   function config ($routeProvider) {
   $routeProvider.
     when('/', {
-      templateUrl: 'views/main.html',
+      templateUrl: 'views/images.html',
       controller: 'MainCtrl',
       controllerAs: 'main'
     }).
@@ -12,6 +12,6 @@
     });
   }
   angular
-    .module('imgApp', ['ngRoute', 'ngResource', 'infinite-scroll'])
+    .module('imgApp', ['ngRoute', 'infinite-scroll'])
     .config(config);
 })();
