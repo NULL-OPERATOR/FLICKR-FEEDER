@@ -44,8 +44,8 @@
     };
 
     return Flickr;
-  };
-angular
-  .module('imgApp')
-  .factory('Flickr', ['$http', DiscountsService]);
+  }
+  angular
+    .module('imgApp')
+    .factory('Flickr', ['$http', DiscountsService]);
 })();

@@ -12,7 +12,7 @@
     };
 
   }
-angular
-  .module('imgApp')
-  .controller('MainCtrl',['Flickr', MainCtrl]);
+  angular
+    .module('imgApp')
+    .controller('MainCtrl',['Flickr', MainCtrl]);
 })();

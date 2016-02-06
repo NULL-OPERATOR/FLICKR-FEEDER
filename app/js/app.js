@@ -11,7 +11,7 @@
       redirectTo: '/'
     });
   }
-angular
-  .module('imgApp', ['ngRoute', 'ngResource', 'infinite-scroll'])
-  .config(config);
+  angular
+    .module('imgApp', ['ngRoute', 'ngResource', 'infinite-scroll'])
+    .config(config);
 })();
